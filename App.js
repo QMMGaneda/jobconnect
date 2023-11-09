@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 // import Full from "./Full"
 
 export default function App() {
   return (
+
     <View style={styles.container}>
+      <ScrollView>
       <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
@@ -71,6 +73,8 @@ export default function App() {
         <Text style = {styles.title}>Cuddler</Text>
         <Text style = {styles.subtitle}>RATE: 16,000</Text>
       </View>
+      </ScrollView>
+      
 
     
     </View>
@@ -86,7 +90,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   tab: {
+    flexDirection: 'column',
+    // flexWrap: 'wrap',
     flexBox: 1,
+    // width: 250,
+    // height: 100,
     padding: 20,
     backgroundColor: '#FFFFFF',
     marginBottom: 10,
@@ -96,11 +104,12 @@ const styles = StyleSheet.create({
     letterSpacing: 2.4,
     //padding: 5,
     color: '#FB6C00',
-    textAlign: 'center',
+    // textAlign: 'right',
     fontSize: 20,
     fontWeight: 'bold',
   },
   subtitle: {
+    // textAlign: 'right',
     fontFamily: 'DMSans_Medium',
     fontSize: 14,
     letterSpacing: 1.7,
