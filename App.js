@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
 // import Full from "./Full"
 
 export default function App() {
@@ -7,6 +7,7 @@ export default function App() {
 
     <View style={styles.container}>
       <ScrollView>
+      <TouchableOpacity style={styles.tab} onPress={() => alert('Dish Washer Job pressed')}>
       <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
@@ -17,8 +18,10 @@ export default function App() {
         <Text style = {styles.title}>Dish Washer</Text>
         <Text style = {styles.subtitle}>RATE: 16,000</Text>
       </View>
+      </TouchableOpacity>
 
-      <View style={styles.tab}>
+      <TouchableOpacity style={styles.tab} onPress={() => alert('House Cleaner Job pressed')}>
+        <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
           <Text style = {styles.subtitle}>
@@ -27,10 +30,11 @@ export default function App() {
         </Text>
         <Text style = {styles.title}>House Cleaner</Text>
         <Text style = {styles.subtitle}>RATE: 16,000</Text>
-        
       </View>
-
-      <View style={styles.tab}>
+      </TouchableOpacity>
+      
+      <TouchableOpacity style={styles.tab} onPress={() => alert('Window Wiper Job pressed')}>
+        <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
           <Text style = {styles.subtitle}>
@@ -40,8 +44,11 @@ export default function App() {
         <Text style = {styles.title}>Window Wiper</Text>
         <Text style = {styles.subtitle}>RATE: 16,000</Text>
       </View>
+        </TouchableOpacity>
 
-      <View style={styles.tab}>
+      
+        <TouchableOpacity style={styles.tab} onPress={() => alert('Helper Job pressed')}>
+         <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
           <Text style = {styles.subtitle}>
@@ -51,8 +58,10 @@ export default function App() {
         <Text style = {styles.title}>Helper</Text>
         <Text style = {styles.subtitle}>RATE: 18,000</Text>
       </View>
+        </TouchableOpacity>
 
-      <View style={styles.tab}>
+        <TouchableOpacity style={styles.tab} onPress={() => alert('DeathBed Companion Job pressed')}>
+        <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
           <Text style = {styles.subtitle}>
@@ -62,8 +71,10 @@ export default function App() {
         <Text style = {styles.title}>Deathbed Companion</Text>
         <Text style = {styles.subtitle}>RATE: 5,000</Text>
       </View>
-
-      <View style={styles.tab}>
+        </TouchableOpacity>
+      
+        <TouchableOpacity style={styles.tab} onPress={() => alert('Cuddler Job pressed')}>
+        <View style={styles.tab}>
         <Text >
         <Image style = {styles.image}source={require('./assets/Location.png')}/>
           <Text style = {styles.subtitle}>
@@ -73,6 +84,8 @@ export default function App() {
         <Text style = {styles.title}>Cuddler</Text>
         <Text style = {styles.subtitle}>RATE: 16,000</Text>
       </View>
+        </TouchableOpacity>
+      
       </ScrollView>
       
 
