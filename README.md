@@ -10,3 +10,7 @@ in the terminal > npx create-expo-app awesomeProject
 in the terminal > cd awsomeProject
 
 in the terminal >  npx expo start // start the app.js
+
+
+Link:
+https://reactnavigation.org/docs/bottom-tab-navigator/
